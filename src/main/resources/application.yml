@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: kotlin_2405
+  datasource:
+    url: jdbc:h2:mem:testdb;MODE=MYSQL
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        use_jdbc_metadata_defaults: true
+        format_sql: true
+        highlight_sql: true
+        use_sql_comments: true
+  h2:
+    console:
+      enabled: true
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.orm.jdbc.bind: trace
+    com.linecorp.kotlinjdsl: debug
